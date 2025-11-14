@@ -19,6 +19,7 @@ O projeto consiste em um backend feito em **Spring Boot (Java)** que gerencia os
 * **Java 17** 
 * **Spring Boot** 
 * **Spring Data JPA** 
+* **Lombok** 
 * **H2 Database** 
 * **Maven** 
 

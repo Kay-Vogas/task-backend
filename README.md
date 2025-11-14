@@ -61,19 +61,23 @@ Abaixo estão os diagramas que modelam a arquitetura e o comportamento da aplica
 Este diagrama mostra as interações do usuário com as principais funcionalidades do sistema.
 
 ```mermaid
-graph TD
-    A(Usuário) --> C[Criar Tarefa]
-    A --> R[Ver Lista de Tarefas]
-    A --> U[Atualizar Tarefa]
-    A --> D[Deletar Tarefa]
-    A --> T[Concluir/Desmarcar Tarefa]
+classDiagram
+    class Task {
+        -Long id
+        -String nome
+        -String descricao
+        -Boolean status
+        -Priority prioridade
+        +Task()
+        +getters/setters...
+    }
 
-    R --> O(Ordenar por Prioridade)
-    U --> M(Abrir Modal de Edição)
+    class Priority {
+        <<enumeration>>
+        BAIXA
+        MEDIA
+        ALTA
+        URGENTE
+    }
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style C fill:#ccf,stroke:#333
-    style R fill:#ccf,stroke:#333
-    style U fill:#ccf,stroke:#333
-    style D fill:#ccf,stroke:#333
-    style T fill:#ccf,stroke:#333
+    Task "1" *-- "1" Priority : "possui"

@@ -45,7 +45,7 @@ Para executar o projeto, você precisa rodar o **Backend** e o **Frontend** sepa
 
 > **Nota sobre o Banco de Dados:** O projeto está configurado para usar o H2 (banco em memória). Você pode acessar o console do H2 em `http://localhost:8080/h2-console` e usar a URL JDBC `jdbc:h2:mem:testdb` para visualizar as tabelas.
 
-### 2. Executando o Frontend 
+### 2. Executando o Frontend [Frontend do Projeto](https://github.com/Kay-Vogas/task-frontend)
 
 1.  **Abra a pasta** que contém os arquivos `index.html`, `task.js` e `style.css` no **Visual Studio Code**.
 2.  **Instale a extensão "Live Server"** no VS Code (ela é essencial para evitar problemas de CORS com arquivos locais).
